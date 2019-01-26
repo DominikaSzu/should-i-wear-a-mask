@@ -9,22 +9,21 @@ body {
 	height: 100vh;
 	font-family: 'Staatliches', cursive;
 	font-size: 16px;
+	background-color: #631145;
 }
 
 .infobox {
-	border: 2px solid pink;
 	width: 400px;
 	height: 500px;
 	margin: auto;
 	top: 50%;
 	position: relative;
 	transform: translateY(-50%);
-	background-color: #631145;
 	color: #F24D0C;
 	padding: 50px;
 	text-align: center;
 }
 
-.infobox h3 {
+.infobox h1 {
 	font-size: 2.6em;
 }
