@@ -27,3 +27,7 @@ body {
 .infobox h1 {
 	font-size: 2.6em;
 }
+
+.results-list {
+	list-style-type: none;
+}
