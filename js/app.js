@@ -41,11 +41,12 @@ function airQualityPm10(num) {
 myPromise.then(response => response.json())
 		.then(response => {
 			console.log(response)
+			const city = response.data.city.name
+			localization.textContent = city.split("-")[0];
 			results.forEach(result => {
 				const info = result.dataset.name;
 				const infoValue = response.data.iaqi[info];
 				result.textContent = infoValue.v;
-
 			})
 		})
 		.catch(err => console.error(err));
