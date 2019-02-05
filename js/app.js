@@ -6,7 +6,8 @@ const settings = {
 	results: document.querySelectorAll('.result'),
 	answerBox: document.querySelector('p.answer'),
 	airDesc: document.querySelector('.air-desc'),
-	advice: document.querySelector('.advice')
+	advice: document.querySelector('.advice'),
+	image: document.querySelector('img')
 }
 
 
@@ -32,10 +33,12 @@ function generalAirQuality(pm10, pm25) {
 		settings.answerBox.textContent = 'NO';
 		settings.airDesc.textContent = 'good';
 		settings.advice.textContent = 'can go outside, open the window and enjoy your day';
+		settings.image.setAttribute('src', 'img/good.svg');
 	} else {
 		settings.answerBox.textContent = 'YES';
 		settings.airDesc.textContent = 'bad';
 		settings.advice.textContent = 'should rather stay at home, at least for now';
+		settings.image.setAttribute('src', 'img/bad.svg');
 	}
 }
 

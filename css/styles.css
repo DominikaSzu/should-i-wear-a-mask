@@ -9,7 +9,7 @@ body {
 	height: 100vh;
 	font-family: 'Staatliches', cursive;
 	font-size: 16px;
-	background-color: #631145;
+	background-image: linear-gradient(to right top, #631145, #a5394d, #d8704c, #f5b150, #f9f871);
 }
 
 .infobox {
@@ -19,9 +19,10 @@ body {
 	top: 50%;
 	position: relative;
 	transform: translateY(-50%);
-	color: #F24D0C;
+	color: #fff;
 	padding: 50px;
 	text-align: center;
+	text-shadow: 3px 3px 0px grey;
 }
 
 .infobox h1 {
@@ -30,8 +31,22 @@ body {
 
 .infobox .answer {
 	font-size: 2em;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s;
+}
+
+.infobox .answer:hover {
+	font-size: 2.3em;
+	color: #B33059;
 }
 
 .results-list {
 	list-style-type: none;
+}
+
+img {
+	width: 200px;
 }
