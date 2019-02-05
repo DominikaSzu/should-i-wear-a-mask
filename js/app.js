@@ -1,11 +1,15 @@
-const localization = document.querySelector('.localization');
-const pm10Info = document.querySelector('.pm10-result');
-const pm25Info = document.querySelector('.pm25-result');
-const myPromise = fetch('https://api.waqi.info/feed/here/?token=bec1f2834d0747c3fad4a5968e913404e4b1d0df');
-const results = document.querySelectorAll('.result');
-const answerBox = document.querySelector('p.answer');
-const airDesc = document.querySelector('.air-desc');
-const advice = document.querySelector('.advice');
+const settings = {
+	localization: document.querySelector('.localization'),
+	pm10Info: document.querySelector('.pm10-result'),
+	pm25Info: document.querySelector('.pm25-result'),
+	myPromise: fetch('https://api.waqi.info/feed/krakow/?token=bec1f2834d0747c3fad4a5968e913404e4b1d0df'),
+	results:document.querySelectorAll('.result'),
+	answerBox: document.querySelector('p.answer'),
+	airDesc: document.querySelector('.air-desc'),
+	advice: document.querySelector('.advice')
+}
+
+
 
 function airQualityPm25(num) {
 	if (num <= 20) {
@@ -30,24 +34,24 @@ function airQualityPm10(num) {
 function generalAirQuality(pm10, pm25) {
 	if (pm10 && pm25) {
 		console.log('good air');
-		answerBox.textContent = 'NO';
-		airDesc.textContent = 'good';
-		advice.textContent = 'can go outside, open the window and enjoy your day';
+		settings.answerBox.textContent = 'NO';
+		settings.airDesc.textContent = 'good';
+		settings.advice.textContent = 'can go outside, open the window and enjoy your day';
 	} else {
 		console.log('bad air');
-		answerBox.textContent = 'YES';
-		airDesc.textContent = 'bad';
-		advice.textContent = 'should rather stay at home, at least for now';
+		settings.answerBox.textContent = 'YES';
+		settings.airDesc.textContent = 'bad';
+		settings.advice.textContent = 'should rather stay at home, at least for now';
 	}
 }
 
-myPromise.then(response => response.json())
+settings.myPromise.then(response => response.json())
 		.then(response => {
 			console.log(response)
 			const city = response.data.city.name
-			localization.textContent = city.split("-")[0];
+			settings.localization.textContent = city.split("-")[0];
 		
-			results.forEach(result => {
+			settings.results.forEach(result => {
 				const info = result.dataset.name;
 				const infoValue = response.data.iaqi[info];
 				result.textContent = infoValue.v;
