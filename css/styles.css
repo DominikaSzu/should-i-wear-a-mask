@@ -4,12 +4,23 @@
 	box-sizing: border-box;
 }
 
+*, *:before, *after {
+  box-sizing: inherit;
+}
+
+html {
+	background: linear-gradient(to right top, #631145, #a5394d, #d8704c, #f5b150, #f9f871) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;	
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
 	font-family: 'Staatliches', cursive;
 	font-size: 16px;
-	background-image: linear-gradient(to right top, #631145, #a5394d, #d8704c, #f5b150, #f9f871);
 }
 
 .infobox {
