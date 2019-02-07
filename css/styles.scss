@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 
+$main-font-color: #fff;
+$answer-hover-color: #B33059;
+$img-width: 200px;
+$font-shadow: 3px 3px 0px grey;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -27,10 +32,10 @@ html {
 			top: 50%;
 			position: relative;
 			transform: translateY(-50%);
-			color: #fff;
+			color: $main-font-color;
 			padding: 50px;
 			text-align: center;
-			text-shadow: 3px 3px 0px grey;
+			text-shadow: $font-shadow;
 			h1 {
 				font-size: 2.6em;
 			}
@@ -43,7 +48,7 @@ html {
 				transition: all 0.2s;
 				&:hover {
 					font-size: 2.3em;
-					color: #B33059;
+					color: $answer-hover-color;
 				}
 			}
 			.results-list {
@@ -51,11 +56,10 @@ html {
 			}
 
 			img {
-				width: 200px;
+				width: $img-width;
 			}
 		}
 	}
 }
-
 
 
