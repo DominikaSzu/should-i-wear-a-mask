@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Staatliches");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: inherit; }
+
+html {
+  background: linear-gradient(to right top, #631145, #a5394d, #d8704c, #f5b150, #f9f871) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  html body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Staatliches', cursive;
+    font-size: 16px; }
+    html body .infobox {
+      width: 400px;
+      height: 500px;
+      margin: auto;
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%);
+      color: #fff;
+      padding: 50px;
+      text-align: center;
+      text-shadow: 3px 3px 0px grey; }
+      html body .infobox h1 {
+        font-size: 2.6em; }
+      html body .infobox .answer {
+        font-size: 2em;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s; }
+        html body .infobox .answer:hover {
+          font-size: 2.3em;
+          color: #B33059; }
+      html body .infobox .results-list {
+        list-style-type: none; }
+      html body .infobox img {
+        width: 200px; }

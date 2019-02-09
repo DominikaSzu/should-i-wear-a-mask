@@ -1,0 +1,23 @@
+{
+  "name": "should-i-wear-a-mask",
+  "version": "1.0.0",
+  "description": "A script that helps me to decide whether to wear an antismog mask or not. Data are taken from Air Quality Data API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominikaSzu/should-i-wear-a-mask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DominikaSzu/should-i-wear-a-mask/issues"
+  },
+  "homepage": "https://github.com/DominikaSzu/should-i-wear-a-mask#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
