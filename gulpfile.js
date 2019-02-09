@@ -8,6 +8,7 @@ const terser = require('gulp-terser');
 const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
+const runSequence = require('gulp4-run-sequence');
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/*.scss')
@@ -43,4 +44,17 @@ gulp.task('images', function() {
 	return gulp.src('app/img/*.+(png|jpg|svg|gif)')
 				.pipe(cache(imagemin()))
 				.pipe(gulp.dest('dist/img'))
+});
+
+
+gulp.task('build', function(callback) {
+	runSequence(['sass', 'useref', 'images'],
+		callback
+	)
+});
+
+gulp.task('default', function(callback) {
+	runSequence(['sass', 'watch'],
+	callback
+	)
 });
