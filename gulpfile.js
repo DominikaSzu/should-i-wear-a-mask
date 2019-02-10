@@ -9,6 +9,7 @@ const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const runSequence = require('gulp4-run-sequence');
+const deploy = require('gulp-gh-pages');
 
 gulp.task('sass', function() {
 	return gulp.src('app/scss/*.scss')
@@ -57,4 +58,9 @@ gulp.task('default', function(callback) {
 	runSequence(['sass', 'watch'],
 	callback
 	)
+});
+
+gulp.task('deploy', function() {
+	return gulp.src('./dist/**/*')
+			.pipe(deploy())
 });
